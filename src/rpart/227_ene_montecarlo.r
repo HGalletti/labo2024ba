@@ -9,7 +9,7 @@ require("primes")
 
 PARAM <- list()
 # reemplazar por las propias semillas
-PARAM$semilla_primigenia <- 378821
+PARAM$semilla_primigenia <- 610559  
 PARAM$qsemillas <- 50
 
 # elegir SU dataset comentando/ descomentando
