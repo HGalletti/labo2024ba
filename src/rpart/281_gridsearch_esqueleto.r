@@ -155,7 +155,7 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
     
       print(paste("Iterando vmin_split:", vmin_split, "vmin_bucket:", vmin_bucket))
     
-      for (vcp in c(-1, -0.5, 0, 0.001, 0.01)) {
+      for (vcp in c(-1, -0.5, 0, 0.01, 0.1)) {
         print(paste("Iterando vcp:", vcp))
       
         param_basicos <- list(
