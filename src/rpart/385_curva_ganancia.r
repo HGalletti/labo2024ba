@@ -119,7 +119,7 @@ gra <- ggplot(
            aes( x = pos, y = ganancia_acumulada,
                 color = ifelse(fold == 1, "train", "test") )
              ) + geom_line()
-dev.off()
+#dev.off()
 print( gra )
 
 cat( "Train gan max: ", dataset[fold==1, max(ganancia_acumulada)], "\n" )
