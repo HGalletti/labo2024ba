@@ -33,7 +33,7 @@ options(error = function() {
 #  muy pronto esto se leera desde un archivo formato .yaml
 PARAM <- list()
 
-PARAM$experimento <- "HT4220"
+PARAM$experimento <- "HT4221"
 
 PARAM$input$training <- c(202107) # los meses en los que vamos a entrenar
 
@@ -54,7 +54,8 @@ hs <- makeParamSet(
   makeIntegerParam("num_leaves", lower = 8L, upper = 1024L),
   makeNumericParam("feature_fraction", lower = 0.1, upper = 1.0),
   makeIntegerParam("min_data_in_leaf", lower = 1L, upper = 8000L),
-  makeNumericParam("colsample_bytree", lower = 0.1, upper = 1.0),
+  makeNumericParam("lambda_l1", lower = 0.0, upper = 10.0),
+  makeNumericParam("lambda_l2", lower = 0.0, upper = 10.0),
   makeIntegerParam("n_estimators", lower = 50L, upper = 2000L),
   makeIntegerParam("envios", lower = 5000L, upper = 15000L)
 )
