@@ -56,7 +56,6 @@ hs <- makeParamSet(
   makeIntegerParam("min_data_in_leaf", lower = 1L, upper = 8000L),
   makeNumericParam("colsample_bytree", lower = 0.1, upper = 1.0),
   makeIntegerParam("n_estimators", lower = 50L, upper = 2000L),
-  makeDiscreteParam("boosting_type", values = c("gbdt", "dart")),
   makeIntegerParam("envios", lower = 5000L, upper = 15000L)
 )
 
