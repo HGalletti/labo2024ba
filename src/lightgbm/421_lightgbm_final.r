@@ -17,11 +17,14 @@ PARAM$input$training <- c(202107) # meses donde se entrena el modelo
 PARAM$input$future <- c(202109) # meses donde se aplica el modelo
 
 
-PARAM$finalmodel$num_iterations <- 1000
-PARAM$finalmodel$learning_rate <- 0.027
-PARAM$finalmodel$feature_fraction <- 0.8
-PARAM$finalmodel$min_data_in_leaf <- 76
-PARAM$finalmodel$num_leaves <- 8
+PARAM$finalmodel$num_iterations <- 3045
+PARAM$finalmodel$learning_rate <- 0.0100093428399226
+PARAM$finalmodel$feature_fraction <- 0.204397295784044
+PARAM$finalmodel$min_data_in_leaf <- 185
+PARAM$finalmodel$num_leaves <- 955
+PARAM$finalmodel$lambda_l1 <- 3.5549573440752
+PARAM$finalmodel$lambda_l2 <- 8.73657928902837
+PARAM$finalmodel$n_estimators <- 560
 
 PARAM$finalmodel$max_bin <- 31
 
