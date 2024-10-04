@@ -437,7 +437,7 @@ wf_julio <- function( pnombrewf )
   DR_drifting_base(metodo="deflacion")
   FEhist_base()
   FErf_attributes_base()
-  #CN_canaritos_asesinos_base(ratio=2 desvio=1)
+  #CN_canaritos_asesinos_base(ratio=2, desvio=1)
 
   ts7 <- TS_strategy_base7()
   ht <- HT_tuning_base()
