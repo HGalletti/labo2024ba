@@ -459,7 +459,7 @@ wf_SEMI_sep <- function( pnombrewf )
   FEintra_manual_base()
   DR_drifting_base(metodo="rank_simple")
   FEhist_base()
-  FErf_attributes_base(num_iterations = 50, num_leaves  = 16, min_data_in_leaf = 2, feature_fraction_bynode = 0.8)
+  FErf_attributes_base()
   CN_canaritos_asesinos_base(ratio=2, desvio=-1.0)
 
   ts9 <- TS_strategy_base9()
