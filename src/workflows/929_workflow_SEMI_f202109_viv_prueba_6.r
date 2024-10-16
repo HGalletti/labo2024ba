@@ -1,5 +1,5 @@
 # Corrida general del Workflow Epic
-# Con respecto a Prueba 4, cambiado RF y puesto 0.3 en undersampling de TS, colocados para optimizar lambda 1 y lambda 2, unbalanced TRUE, subidas a 100 las iteraciones de BO.
+# Con respecto a Prueba 4, cambiado RF y puesto 0.3 en undersampling de TS, colocados para optimizar lambda 1 y lambda 2, unbalanced TRUE, subidas a 100 las iteraciones de BO. En la 6 cambiado desvio a 1 en CN.
 
 # limpio la memoria
 rm(list = ls(all.names = TRUE)) # remove all objects
@@ -456,12 +456,12 @@ wf_SEMI_sep <- function( pnombrewf )
   param_local <- exp_wf_init( pnombrewf ) # linea fija
 
   DT_incorporar_dataset_competencia2024()
-  CA_catastrophe_base( metodo="Ninguno") 
+  CA_catastrophe_base( metodo="MachineLearning") # Probar luego si funciona Ninguno.
   FEintra_manual_base()
   DR_drifting_base(metodo="rank_simple")
   FEhist_base()
   FErf_attributes_base()
-  CN_canaritos_asesinos_base(ratio=2, desvio=-1.0)
+  CN_canaritos_asesinos_base(ratio=2, desvio=1.0)
 
   ts9 <- TS_strategy_base9()
 
