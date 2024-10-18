@@ -459,7 +459,7 @@ wf_SEMI_sep <- function( pnombrewf )
   # la Bayesian Optimization con el semillerio dentro
   ht <- HT_tuning_semillerio(
     semillerio = 20, # semillerio dentro de la Bayesian Optim
-    bo_iteraciones = 100  # iteraciones inteligentes
+    bo_iteraciones = 30  # iteraciones inteligentes
   )
 
   fm <- FM_final_models_lightgbm_semillerio( 
