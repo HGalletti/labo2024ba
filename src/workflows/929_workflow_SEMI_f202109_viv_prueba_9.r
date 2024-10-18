@@ -1,5 +1,5 @@
 # Corrida general del Workflow Epic
-# Con respecto a Prueba 4, cambiado RF y puesto 0.2 en undersampling de TS, colocados para optimizar lambda 1 y lambda 2, unbalance TRUE, subidas a 100 las iteraciones de BO. En la 6 cambiado desvio a 1 en CN. Quitado undersamplig, retocado meses TS
+# Con respecto a Prueba 4, cambiado RF y puesto 0.2 en undersampling de TS, colocados para optimizar lambda 1 y lambda 2, unbalance TRUE, subidas a 100 las iteraciones de BO. En la 6 cambiado desvio a 1 en CN. Quitado undersamplig, retocado meses TS. 100 bo, desvio menos 1 en cn
 
 # limpio la memoria
 rm(list = ls(all.names = TRUE)) # remove all objects
@@ -452,14 +452,14 @@ wf_SEMI_sep <- function( pnombrewf )
   DR_drifting_base(metodo="rank_simple")
   FEhist_base()
   FErf_attributes_base()
-  CN_canaritos_asesinos_base(ratio=2, desvio=1.0)
+  CN_canaritos_asesinos_base(ratio=2, desvio=-1.0)
 
   ts9 <- TS_strategy_base9()
 
   # la Bayesian Optimization con el semillerio dentro
   ht <- HT_tuning_semillerio(
     semillerio = 20, # semillerio dentro de la Bayesian Optim
-    bo_iteraciones = 30  # iteraciones inteligentes
+    bo_iteraciones = 100  # iteraciones inteligentes
   )
 
   fm <- FM_final_models_lightgbm_semillerio( 
