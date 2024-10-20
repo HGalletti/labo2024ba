@@ -1,5 +1,5 @@
 # Corrida general del Workflow Epic
-# Es prueba 6 pero arreglado el bug de semillero que elegía el 7mo lugar! Cambiado semillerio para quedarme con los 2 mejores hiperparametros en lugar de primeros 2 y experimentos=2
+# Es prueba 13 cambiando CN a parametros mas usados y semillio solo al mejor.
 # Otro cambio: CA_catastrophe_base( metodo="Ninguno").
 # limpio la memoria
 rm(list = ls(all.names = TRUE)) # remove all objects
@@ -461,7 +461,7 @@ wf_SEMI_sep <- function( pnombrewf )
   DR_drifting_base(metodo="rank_simple")
   FEhist_base()
   FErf_attributes_base()
-  CN_canaritos_asesinos_base(ratio=2, desvio=1.0)
+  CN_canaritos_asesinos_base(ratio=0.95, desvio=2.35)
   
   ts9 <- TS_strategy_base9()
   
@@ -473,9 +473,9 @@ wf_SEMI_sep <- function( pnombrewf )
   
   fm <- FM_final_models_lightgbm_semillerio( 
     c(ht, ts9), # los inputs
-    ranks = c(1:2), # 1 = el mejor de la bayesian optimization
+    ranks = c(1), # 1 = el mejor de la bayesian optimization
     semillerio = 30,   # cantidad de semillas finales
-    repeticiones_exp = 2 )
+    repeticiones_exp = 1 )
   
   SC_scoring_semillerio( c(fm, ts9) )
   KA_evaluate_kaggle_semillerio()
