@@ -11,4 +11,4 @@ Instructivo
 
 5. Ejecutar el archivo "902_run_workflow_SEMI_vivencial.r".
 
-4. Al momento de terminar el workflow, elegir el archivo "KA-xxxx_02_022_r1_9500.csv.csv". Este archivo es una copia del archivo que se subió a la competencia de Kaggle.
+4. Al momento de terminar el workflow, elegir el archivo "KA-xxxx_02_022_r1_9500.csv". Este archivo es una copia del archivo que se subió a la competencia de Kaggle.
